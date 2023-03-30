@@ -1,10 +1,9 @@
-name: 4 - Free Mac
-on: 
-  workflow_dispatch:
-
+name: Free Mac
+on: [push]
 jobs:
   build:
     runs-on: macos-latest
     steps:
+    - uses: actions/checkout@v3
     - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v2
+      uses: mxschmitt/action-tmate@v3
